@@ -15,11 +15,7 @@ export const createOrderSchema = z.object({
 });
 
 export const updateOrderStatusSchema = z.object({
-  status: z.enum(Object.values(OrderStatus) as [string, ...string[]], {
-    errorMap: () => ({
-      message: `status must be one of: ${Object.values(OrderStatus).join(', ')}`,
-    }),
-  }),
+  status: z.enum(Object.values(OrderStatus) as [string, ...string[]]),
 });
 
 export const orderIdParamSchema = z.object({
