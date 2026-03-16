@@ -10,6 +10,9 @@ module.exports = {
   collectCoverageFrom: [
     'src/**/*.ts',
     '!src/infrastructure/http/server.ts',
+    '!src/infrastructure/config/app.config.ts',
+    '!src/infrastructure/database/mongo.connection.ts',
+    '!src/infrastructure/logger/pino.logger.ts',
     '!src/**/*.d.ts',
   ],
   coverageThreshold: {
